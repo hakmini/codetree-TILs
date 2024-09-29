@@ -6,24 +6,14 @@ public class Main {
         int c = 7;
         
         int temp;
-        int temp2;
-        int temp3;
 
         temp = a;
-        a = b;
+        a = c;
+        c = b;
         b = temp;
-
-        temp2 = b;
-        b = c;
-        c = temp2;
-
-        temp3 = c;
-        c = a;
-        a = temp3;
-
-        System.out.println(temp);
-        System.out.println(temp2);
-        System.out.println(temp3);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
 
     }
 }
