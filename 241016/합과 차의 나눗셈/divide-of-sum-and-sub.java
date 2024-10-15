@@ -1,11 +1,14 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // 여기에 코드를 작성해주세요.
-        int a = 10;
-        int b = 3;
-        double c = a+b;
-        double d = a-b;
+        Scanner sc = new Scanner(System.in);
 
-        System.out.printf("%.2f", c/d );
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        double c;
+        c=(double)(a+b)/(a-b);
+
+         System.out.printf("%.2f",c);
     }
 }
