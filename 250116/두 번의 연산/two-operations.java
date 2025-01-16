@@ -4,6 +4,9 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
+        if(a % 2 == 0){
+            System.out.println(a);
+        }
 
         if(a % 2 == 1){
             a += 3;
@@ -14,9 +17,7 @@ public class Main {
         }
 
 
-        if(a % 2 == 0){
-            System.out.println(a);
-        }
+
 
         
     }
