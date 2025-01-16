@@ -12,5 +12,12 @@ public class Main {
         if(a % 3 == 0){
             System.out.println(a/3);
         }
+
+
+        if(a % 2 == 0){
+            System.out.println(a);
+        }
+
+        
     }
 }
