@@ -8,7 +8,7 @@ public class Main {
         int Bm = sc.nextInt();
         int Be = sc.nextInt();
 
-        if(Am >= Bm && Ae >= Be){
+        if(Am > Bm && Ae > Be){
             System.out.println("1");
         }else{
             System.out.println("0");
