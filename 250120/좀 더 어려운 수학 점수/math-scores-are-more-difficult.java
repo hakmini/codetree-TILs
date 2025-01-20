@@ -10,7 +10,7 @@ public class Main {
 
         if(Am > Bm){
             System.out.println("A");
-        }else{
+        }else if(Am < Bm){
             System.out.println("B");
         }
 
