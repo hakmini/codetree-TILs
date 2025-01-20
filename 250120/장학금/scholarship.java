@@ -15,7 +15,7 @@ public class Main {
                 System.out.println("0");
             }
         }
-        if(m <= 80){
+        if(m < 90){
             System.out.println("0");
         }
        
