@@ -6,27 +6,13 @@ public class Main {
 
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int arr[] = new int[10];
-        int count = 0;
-        int f = 0;
+        int arr[] = new int[b]; // 나머지는 0 ~ b-1 범위
 
-
-        /*for(int i = 0; i < 100; i++){
-
-            if(a % b == i){
-                count = i;
-                a = a/b;
-            }
-            arr[count]++;
-        }*/
-        
-        while(a>0){
-            int r = a%b;
-            arr[r]++;
-            a = a/b;
+        while(a > 1){
+            int r = a % b; // 나머지
+            arr[r]++;      // 카운트
+            a = a / b;     // 몫을 다시 a에 저장
         }
-
-
 
         int sum = 0;
         for(int i = 0; i < b; i++){
@@ -36,3 +22,4 @@ public class Main {
         System.out.println(sum);
     }
 }
+
