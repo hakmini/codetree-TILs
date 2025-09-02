@@ -19,7 +19,7 @@ public class Main {
         int minVal = arr[0];
 
         // 주어진 숫자들 중 최댓값과 최솟값을 구합니다.
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < n; i++) {
             if (arr[i] == 999 || arr[i] == -999)
                 break;
 
