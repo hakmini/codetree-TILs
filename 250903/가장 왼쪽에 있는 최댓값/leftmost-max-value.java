@@ -36,9 +36,8 @@ public class Main {
         System.out.print(idx+1 + " " + (idx2+1) + " ");
 
         for(int i = 0; i < idx2; i++){
-            if(arr[i] < max2){
+            if(arr[i] >= max3){
                 System.out.print(i+1);
-
             } 
         }
         
