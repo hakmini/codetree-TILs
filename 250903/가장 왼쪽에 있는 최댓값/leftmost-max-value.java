@@ -1,63 +1,44 @@
 import java.util.Scanner;
 
 public class Main {
+    public static final int MAX_N = 1000;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        int arr[] = new int[n];
+        int n;
+        int[] a = new int[MAX_N];
 
-        for(int i = 0; i < n; i++){
-            arr[i] = sc.nextInt();
-        }
+        n = sc.nextInt();
 
-        int max = arr[0];
-        int max2 = arr[0];
-        int max3 = arr[0];
-        int idx = 0;
-        int idx2 = 0;
-        int idx3 = 0; 
+        for(int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+        
+        int prevMaxIdx = n;
 
-        for(int i = 1; i < n; i++){
-            if(arr[i] > max){   
-                max = arr[i];
-                idx = i;
-            }
-        }
-
-        for(int i = 1; i < idx; i++){
-            if(arr[i] > max2){   
-                max2 = arr[i];
-                idx2 = i;
-            }
+        // 첫 번째 원소가 최대가 되기 전까지 계속 반복합니다.
+        while(true) {
+            // 최대값 후보의 시작은 항상 첫 번째 원소입니다.
+            int maxIdx = 0;
             
+            // 두 번째 원소부터 바로 직전 최대로 뽑힌
+            // 원소 전까지 보면서 그 중 최대 index를 갱신합니다.
+            // index를 오름차순으로 보기 때문에
+            // 최댓값이 여러개인 경우 가장 왼쪽에 있는
+            // 원소가 뽑히게 됩니다.
+            for(int i = 1; i < prevMaxIdx; i++)
+                if(a[i] > a[maxIdx])
+                    maxIdx = i;
+            
+            System.out.print((maxIdx + 1) + " ");
+            
+            // 최대인 원소가 첫 번째 원소라면 종료합니다.
+            if(maxIdx == 0)
+                break;
+            
+            // 바로 직전 최대 index를 갱신해줍니다.
+            prevMaxIdx = maxIdx;
         }
-
-        System.out.print(idx+1 + " " + (idx2+1) + " ");
-
-        int end = idx2; // 이제 idx2의 왼쪽 구간을 탐색 시작
-        while (end > 0) {
-            int maxNow = arr[0];
-            int idxNow = 0;
-
-            for (int i = 1; i < end; i++) {
-                if (arr[i] > maxNow) {
-                    maxNow = arr[i];
-                    idxNow = i;
-                }
-            }
-
-            System.out.print((idxNow+1));
-
-            if (idxNow == 0) break; // 첫 번째 원소 도달 시 종료
-            end = idxNow; // 그 왼쪽 구간으로 탐색 범위 축소
-        }
-        
-
-        
-
-
-    
-
     }
 }
+
