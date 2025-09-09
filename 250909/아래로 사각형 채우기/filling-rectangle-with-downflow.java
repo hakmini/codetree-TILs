@@ -9,19 +9,10 @@ public class Main {
         int arr[][] = new int[n][n];
         int num = 1;
 
-        for(int i = 0; i < n; i++){
-            arr[i][0] = num;
-            num++;
-        }
-
-        for(int i = 0; i < n; i++){
-            arr[i][1] = num;
-            num++;
-        }
-
-        for(int i = 0; i < n; i++){
-            arr[i][2] = num;
-            num++;
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < n; i++) {
+                arr[i][j] = num++;
+            }
         }
 
         for(int i = 0; i < n; i++){
