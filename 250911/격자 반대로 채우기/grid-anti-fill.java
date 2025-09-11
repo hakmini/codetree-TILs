@@ -11,23 +11,44 @@ public class Main {
 
 
         int count = 1;
-        for(int col = n-1; col >= 0; col--) {
-            if (col % 2 == 0){
+        if(n % 2 == 0){
+            for(int col = n-1; col >= 0; col--) {
+                if (col % 2 == 0){
 
-                for(int row = 0; row < n; row++){
+                    for(int row = 0; row < n; row++){
                     arr[row][col] = count;
                     count++;
+                    }
                 }
-            }
-            else {
+                else {
 
-                for(int row = n-1; row >= 0; row--){
+                    for(int row = n-1; row >= 0; row--){
                     arr[row][col] = count;
                     count++;
+                    }
                 }
             }
+        }else{
+            for(int col = n-1; col >= 0; col--) {
+                if (col % 2 == 0){
+
+                    for(int row = n-1; row >= 0; row--){
+                    arr[row][col] = count;
+                    count++;
+                    }
+                }
+                else {
+
+                    for(int row = 0; row < n; row++){
+                    arr[row][col] = count;
+                    count++;
+                    }
+                }
+            }
+
         }
                 
+
 
         for(int row = 0; row < n; row++) {
             for(int col = 0; col < n; col++) {
