@@ -12,19 +12,20 @@ public class Main {
         int Short = str1.length();
 
         for(int i = 0; i < 3; i++){
-            if(Long < str2.length()){
+            if(Long <= str2.length()){
                 Long = str2.length();
             }
-            if(str2.length() < str3.length()){
+            if(str2.length() <= str3.length()){
                 Long = str3.length();
             }
+        
         }
 
         for(int i = 0; i < 3; i++){
-            if(Short > str2.length()){
+            if(Short >= str2.length()){
                 Short = str2.length();
             }
-            if(str2.length() > str3.length()){
+            if(str2.length() >= str3.length()){
                 Short = str3.length();
             }
         }
