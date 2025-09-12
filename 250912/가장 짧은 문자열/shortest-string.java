@@ -8,30 +8,21 @@ public class Main {
         String str2 = sc.next();
         String str3 = sc.next();
 
-        int Long = str1.length();
-        int Short = str1.length();
+        int len1 = str1.length();
+        int len2 = str2.length();
+        int len3 = str3.length();
 
-        for(int i = 0; i < 3; i++){
-            if(Long <= str2.length()){
-                Long = str2.length();
-            }
-            if(str2.length() <= str3.length()){
-                Long = str3.length();
-            }
-        
-        }
+        int Long = len1;
+        int Short = len1;
 
-        for(int i = 0; i < 3; i++){
-            if(Short >= str2.length()){
-                Short = str2.length();
-            }
-            if(str2.length() >= str3.length()){
-                Short = str3.length();
-            }
-        }
+        // 가장 긴 문자열 길이 찾기
+        if(Long < len2) Long = len2;
+        if(Long < len3) Long = len3;
+
+        // 가장 짧은 문자열 길이 찾기
+        if(Short > len2) Short = len2;
+        if(Short > len3) Short = len3;
 
         System.out.print(Long - Short);
-
-
     }
 }
