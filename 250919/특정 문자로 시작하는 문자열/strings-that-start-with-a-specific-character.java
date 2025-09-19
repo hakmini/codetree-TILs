@@ -18,15 +18,12 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             if(arr[i].charAt(0) == c){
+                sum += arr[i].length();
                 num++;
             }
         }
 
-        for(int i = 0; i < n; i++){
-            sum += arr[i].length();
-        }
-
-        double avg = sum / n;
+        double avg = (double) sum / num;
 
         System.out.print(num + " ");
         System.out.printf("%.2f", avg);
