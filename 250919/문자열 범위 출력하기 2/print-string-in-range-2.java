@@ -8,6 +8,7 @@ public class Main {
     
         int n = sc.nextInt();
 
+        n = Math.min(n, str.length());
         for(int i = str.length() - 1; i >= str.length() - n; i--){
             System.out.print(s[i]);
         }
