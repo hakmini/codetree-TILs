@@ -6,20 +6,16 @@ public class Main {
 
         int n = sc.nextInt();
         String strstr = "";
-        for(int i = 0; i < n; i++){
-            String str = sc.next();
-            strstr += str;
+
+        for (int i = 0; i < n; i++) {
+            strstr += sc.next();
         }
 
-
-        for(int i = 0; i < strstr.length(); i += 5){
-            for(int j = i; j < i + 5; j++){
-                System.out.print(strstr.charAt(i));
-                System.out.println();
-                
-            }
+        // 5글자씩 출력
+        for (int i = 0; i < strstr.length(); i += 5) {
+            int end = Math.min(i + 5, strstr.length());
+            System.out.println(strstr.substring(i, end));
         }
-
     }
 }
 
