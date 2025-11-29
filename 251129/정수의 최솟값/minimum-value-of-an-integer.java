@@ -4,9 +4,9 @@ public class Main {
     public static int min(int z, int y, int x){
         int n = 0;
         for(int i = 0; i < 3; i++){
-            if(z > y){
+            if(z >= y){
                 n = y;
-            }else if(y > z){
+            }else if(y >= z){
                 n = z;
             }
 
@@ -22,7 +22,7 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        int minmin = min(a,b, c);
+        int minmin = min(a,b,c);
         System.out.print(minmin);
     }
 }
