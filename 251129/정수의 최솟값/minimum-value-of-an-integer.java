@@ -1,19 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int min(int z, int y, int x){
-        int n = 0;
+    public static int min(int a, int b, int c) {
+        int n = a;
 
-        if(z >= y){
-                n = y;
-        }else if(y >= z){
-                n = z;
-        }
-
+        if (b < n) n = b;
+        if (c < n) n = c;
 
         return n;
-    }
-
+}
 
 
     public static void main(String[] args) {
