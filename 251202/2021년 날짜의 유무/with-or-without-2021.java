@@ -4,14 +4,14 @@ public class Main {
 
     public static boolean isDay(int m, int d) {
         // 월 범위 체크
-        if (m < 1 || m > 12)
+        if (m > 12)
             return false;
 
         // 월별 일수
         int[] days = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 
         // 일 범위 체크
-        if (d < 1 || d > days[m])
+        if (d > days[m])
             return false;
 
         return true;
