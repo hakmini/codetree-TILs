@@ -7,15 +7,13 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
         int[] nums = new int[n];
+
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();
         }
+
         Arrays.sort(nums);
-        for(int i = 0; i < n; i++){
-            if(i == k){
-                System.out.print(nums[k-1]);
-            }
-        }
-        
+
+        System.out.println(nums[k - 1]);
     }
 }
