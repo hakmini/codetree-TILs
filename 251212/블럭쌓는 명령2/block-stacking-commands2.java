@@ -11,10 +11,8 @@ public class Main {
         for(int i = 0; i < K; i++){
             int A = sc.nextInt();
             int B = sc.nextInt();
-            A--;  // 인덱스 보정
-            B--;
-
-            for(int a = A; a <= B; a++){
+   
+            for(int a = A -1 ; a <= B - 1; a++){
                 arr[a]++;
             }
         }
