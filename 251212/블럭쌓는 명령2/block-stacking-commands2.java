@@ -7,13 +7,13 @@ public class Main {
   
 
         int[] arr = new int[N];
-        int max = arr[0];
+        int max = Integer.MIN_VALUE;
         for(int i = 0; i < K; i++){
             int A = sc.nextInt();
             int B = sc.nextInt();
 
             for(int a = A; a <= B; a++){
-                arr[i]++;
+                arr[a]++;
             }
         }
 
