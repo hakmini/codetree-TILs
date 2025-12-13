@@ -1,9 +1,10 @@
 import java.util.*;
 public class Main {
-
+    public static final int MAX_N = 100;
     public static final int MAX_R = 200;
     public static final int OFFSET = 100;
-
+    public static int[] x = new int[MAX_N];
+    public static int[] y = new int[MAX_N]; 
 
     public static int[][] checked = new int[MAX_R + 1][MAX_R + 1];
 
