@@ -1,11 +1,9 @@
 import java.util.*;
 public class Main {
-    public static final int N = 3;
+
     public static final int MAX_R = 200;
     public static final int OFFSET = 100;
 
-    public static int[] x = new int[N];
-    public static int[] y = new int[N];
 
     public static int[][] checked = new int[MAX_R + 1][MAX_R + 1];
 
@@ -20,7 +18,7 @@ public class Main {
 
         }
 
-        for(int i = 0; i < N; i++){
+        for(int i = 0; i < n; i++){
             for(int a = x[i]; a < x[i] + 8; a++){
                 for(int b = y[i]; b < y[i] + 8; b++){
                     checked[a][b]++;
